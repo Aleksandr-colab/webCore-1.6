@@ -550,17 +550,22 @@ h1 {
 .navigation__list {
   display: flex;
   list-style-type: none;
-  padding: 0;
-  overflow-x: scroll;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none; }
+  white-space: nowrap;
+  gap: 10px;
+  padding-right: 16.54px; }
   @media (min-width: 1120px) {
     .navigation__list {
-      overflow: hidden;
+      min-width: 1000px;
+      display: flex;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      overflow-x: visible;
-      overflow-y: visible; } }
+      white-space: nowrap;
+      padding-right: 16.54px;
+      padding-left: 0; } }
   .navigation__list::-webkit-scrollbar {
     width: 0;
     height: 0; }
@@ -577,11 +582,12 @@ h1 {
   outline: none;
   display: inline-block;
   margin: 5px;
-  padding: 5px 10px; }
+  padding: 5px 5px; }
 
 .nav__item:focus {
   outline: 2px solid #b8ffec;
-  border-radius: 6px; }
+  border-radius: 6px;
+  background-color: white; }
 
 .show-more__icon ::before {
   content: "";
@@ -1019,6 +1025,9 @@ a {
     background-color: transparent;
     border: 2px solid #ff3e79; }
 
+.equipment-repair-slide__icon:hover {
+  opacity: 0.5; }
+
 .button {
   display: flex;
   align-items: center;
@@ -1156,6 +1165,12 @@ a {
 .swiper-pagination {
   line-height: 1; }
 
+.image-slider__slide:hover {
+  box-shadow: 3px 5px 10px -7px;
+  transform: scale(1.02);
+  transition: transform 200ms;
+  cursor: pointer; }
+
 .swiper-pagination-bullet {
   width: 1.2rem;
   height: 1.2rem;
@@ -1229,6 +1244,11 @@ a {
     font-weight: 400; }
   .equipment-repair-slide__icon {
     align-self: flex-end; }
+
+.equipment-repair-slide:hover {
+  box-shadow: 3px 5px 10px -7px;
+  transform: scale(1.02);
+  transition: transform 200ms; }
 
 .service-prices {
   padding-bottom: 0; }
