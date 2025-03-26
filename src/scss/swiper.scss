@@ -16,7 +16,13 @@
 .swiper-pagination {
   line-height: 1;
 }
+.image-slider__slide:hover{
 
+  box-shadow:3px 5px 10px -7px ;
+	transform: scale(1.02);
+	transition: transform 200ms;
+  cursor: pointer;
+}
 .swiper-pagination-bullet {
   width: 1.2rem;
   height: 1.2rem;

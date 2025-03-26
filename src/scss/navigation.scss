@@ -2,17 +2,24 @@
   &__list {
     display: flex;
     list-style-type: none;
-    padding: 0;
-    overflow-x: scroll;
+ 
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     overflow-y: hidden;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    white-space: nowrap;
+    gap: 10px;
+    padding-right: 16.54px;
 
     @media (min-width: 1120px) {
-      overflow: hidden;
-      flex-wrap: wrap;
-      overflow-x: visible;
-      overflow-y: visible;
+      min-width: 1000px;
+      display: flex
+;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        white-space: nowrap;
+        padding-right: 16.54px;
+        padding-left: 0;
     }
 
     &::-webkit-scrollbar {
@@ -34,10 +41,12 @@
   outline: none;
   display: inline-block;
   margin: 5px;
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
 
 .nav__item:focus {
   outline: 2px solid #b8ffec;
   border-radius: 6px;
+  background-color: white;
 }
+
