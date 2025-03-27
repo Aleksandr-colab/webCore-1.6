@@ -30,3 +30,17 @@
     }
   }
 }
+.show-more__icon::before {
+  content: ''; 
+  display: inline-block;
+  width: 24px; 
+  height: 24px; 
+  background: center / contain no-repeat url("../img/more-info-icon.svg"); 
+  background-size: cover;
+  transition: transform 0.3s ease; 
+}
+
+
+.show-more__icon.rotated::before {
+  transform: rotate(180deg); 
+}
